@@ -65,3 +65,38 @@ def Get_lesson_Name(msg):
 
 
 
+
+
+def Set_Float(n,r1,r2):
+    try:
+        n=float(n)
+        if n>=r1 and n<=r2:
+            return n
+        else:
+            return -1
+    except:
+        return -1
+
+def Set_Int(n,r1,r2):
+    try:
+        n=int(n)
+        if n>=r1 and n<=r2:
+            return n
+        else:
+            return -1
+    except:
+        return -1
+
+
+
+def Set_FileName(s):
+    s=str(s)
+    loc=s.find(".")
+    if loc==0  or loc==len(s)-1 or s.count(".")==0 or s.count(".")>1:
+        return -1
+    if len(s)<4:
+        return -1
+    if s.count("/")+s.count("\\")+s.count("*")+s.count(":")!=0:
+        return -1
+    return s
+    

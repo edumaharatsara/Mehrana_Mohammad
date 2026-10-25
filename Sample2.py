@@ -2,8 +2,9 @@ import subprocess
 subprocess.call("cls",shell=True)
 customer_name=input("Enter Customer name :")
 code_posti=int(input("Enter Code Posti : "))
+addres=input("Enter Address : ")
 data="==============================================================\n"
-data+="{0:20s}{1:15d}".format(customer_name,code_posti)+"\n"
+data+="{0:20s}{1:15d}\t{2:30s}".format(customer_name,code_posti,addres)+"\n"
 s1=0 ; s2=0 ; s3=0
 while True:
     kala=input("Enter Kala : ")
